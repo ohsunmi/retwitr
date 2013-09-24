@@ -1,18 +1,5 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-# development:
-#   adapter: postgresql
-#   database: retwitr_development
-#   host: localhost
-#   username: Sunmi
-
-
 development:
   adapter: postgresql
-  database: d988sma5uilsa9
-  host: ec2-54-225-69-193.compute-1.amazonaws.com
-  username: bufxbeyxzfgdhe
-  password: REAIk71cf_9SbqAZkr5ndHr99P
+  database: retwitr_development
+  host: localhost
+  username: Sunmi
