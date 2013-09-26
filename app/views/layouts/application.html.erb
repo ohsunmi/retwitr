@@ -7,13 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="container">
 
-	<% if notice || alert %>
-		<p class="notice"><%= notice %></p>
-	  <p class="alert"><%= alert %></p>
-	<% end %>
+		<%= link_to "home", root_url %> | 
+		<%= link_to "search", '/search' %> | 
+
+		<%= render 'devise/menu/login_items' %>
+
+		<%= yield %>
+	</div>
 	
-<%= yield %>
-
 </body>
 </html>

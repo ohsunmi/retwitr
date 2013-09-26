@@ -1,0 +1,14 @@
+<h3><%= @timeline.first.user.name %></h3>
+
+<% @timeline.each do |status| %>
+	<%= Time.now - status.created_at %>
+	<%= status.text %>
+	<b><%= status.retweet_count %></b><br>
+<% end %>
+
+
+<%= form_tag add_search_path do %>
+	<%= hidden_field_tag "twitter_handle", @timeline.first.user.screen_name %>
+
+	<%= submit_tag 'Add to favorites' %>
+<% end %>
