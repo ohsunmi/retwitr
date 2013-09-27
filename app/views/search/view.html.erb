@@ -12,12 +12,12 @@
 
 <% @timeline.each do |status| %>
 	<div class="tweet">
-		<%= time_ago_in_words(status.created_at) %> ago:
-		<%= status.text %>
-		<b><%= status.retweet_count %></b>
+			<%= time_ago_in_words(status.created_at) %> ago:
+			<%= status.text %>
+			<b><%= status.retweet_count %></b>
 	</div>
 <% end %>
 
 <div class="icon">
-	<i class="icon-plus"></i><%= link_to "add to favorites", :controller => :search, :action => "add_search", :q => @timeline.first.user.screen_name %>
+	<i class="icon-remove"></i><%= link_to "remove from favorites", :controller => :search, :action => "remove", :q => params[:id] %>
 </div><!-- .icon -->

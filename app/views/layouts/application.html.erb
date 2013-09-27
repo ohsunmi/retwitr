@@ -5,16 +5,35 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
  	<%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
+
 	<div class="container">
 
-		<%= link_to "home", root_url %> | 
-		<%= link_to "search", '/search' %> | 
+		<nav>
+			<ul>		
+				<% if user_signed_in? %>
+					<li><a href="/user/<%= current_user.id %>">favorites</a></li>
+			  	<li><%= link_to('logout', destroy_user_session_path, :method => :delete) %></li>
+				  <%= form_tag('/search', method: 'post') do %>
+						<li id="search_bar"><%= text_field_tag(:q) %></li>
+					<% submit_tag("Search") %>
+				<% end %>
+				<% else %>
+				  <li><%= link_to "login", user_omniauth_authorize_path(:twitter) %></li>
+				<% end %>
 
-		<%= render 'devise/menu/login_items' %>
+				<div id="logo">
+					<a href="/"><img src="../retwitr.png" /></a>
+				</div><!-- #logo -->
+
+			</ul>
+		</nav>
 
 		<%= yield %>
+
 	</div>
 	
 </body>

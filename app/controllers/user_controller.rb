@@ -1,7 +1,7 @@
 class UserController < ApplicationController
 	
-	def add_search
-
+	def index
+		@user = User.find(params[:id]) 
 	end
-
+	
 end

@@ -1,0 +1,10 @@
+<div id="search">
+	<% @user.searches.each do |search| %>
+		<div id="searches">
+			<a href="/search/<%= search.id %>"><img src="<%= search.image %>" /></a>
+			<a href="/search/<%= search.id %>"><%= search.name %></a>
+		</div><!-- #searches -->
+	<% end %>
+	<div style="clear:both;"></div>
+</div><!-- #search -->
+

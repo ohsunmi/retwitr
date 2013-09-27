@@ -8,6 +8,7 @@ gem 'omniauth-twitter'
 gem 'devise'
 gem 'pg'
 gem 'dotenv-rails'
+gem 'httparty'
 
 
 group :development, :test do

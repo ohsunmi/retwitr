@@ -11,3 +11,100 @@
  *= require_self
  *= require_tree .
  */
+
+/**************************** GENERAL ****************************/
+
+body {
+	font-family: 'Gentium Basic', serif; font-weight: 400;
+}
+
+h2 {
+	font-weight: 700;
+	text-align: center;
+}
+
+h3 {
+	font-weight: 700;
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+li {
+	list-style: none;
+	float: left;
+	padding: 20px;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav {
+	height: 100px;
+	padding: 10px 0 60px;
+}
+
+#logo {
+	float: right;
+	padding: 0 20px;
+}
+
+#search_bar {
+	width: 130px;
+}
+
+/**************************** USER ****************************/
+
+#search {
+	width: 660px;
+	height: 80%;
+	margin: 0 auto;
+	padding: 10px;
+	background: url('../cream.png');
+}
+
+#searches {
+	width: 50px;
+	height: 100px;
+	padding: 40px;
+	float: left;
+	text-align: center;
+}
+
+.icon {
+	width: 70px;
+	margin: 30px auto;
+	text-align: center;
+}
+
+/**************************** SEARCH ****************************/
+
+.search_profile {
+	width: 500px;
+	height: 260px;
+	margin: 0 auto;
+	text-align: center;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+}
+
+.search_pic img {
+	width: 58px;
+	height: 58px;
+	margin: 30px auto 10px;
+	padding: 5px;
+	background-color: white;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+/**************************** TWEETS ****************************/
+
+.tweet {
+	line-height: 1.2em;
+	width: 420px;
+	margin: 0 auto;
+	padding: 20px;
+}

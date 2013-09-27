@@ -1,12 +1,13 @@
-<% if user_signed_in? %>
-  <li><%= link_to('logout', destroy_user_session_path, :method => :delete) %></li>
-<% else %>
-  <li><%= link_to('login', new_user_session_path)  %></li>
-<% end %>
-<li>User: 
-  <% if current_user %>
-    <%= current_user.email %>
-  <% else %>
-    (not logged in)
-  <% end %>
-</li>
+<div id="login">
+	<% if user_signed_in? %>
+	  <li><%= link_to('logout', destroy_user_session_path, :method => :delete) %></li>
+	<% else %>
+	  <li><%= link_to('login', user_omniauth_authorize_path)  %></li>
+	<% end %>
+</div><!-- #login -->
+
+<div id="name">
+	<% if current_user %>
+	  <a href="/user/<%= current_user.id %>"><%= current_user.name.capitalize %></a>
+	<% end %>
+</div>
