@@ -1,6 +1,5 @@
-
 <style media="screen">
-	<%= if @timeline.first.user.profile_banner_url == nil %>
+	<% if @timeline.first.user.profile_banner_url == nil %>
 		.search_profile { background-image: url('../dark.png'); }
 	<% else %>
 		.search_profile { background-image: url(<%= @timeline.first.user.profile_banner_url %>); }
