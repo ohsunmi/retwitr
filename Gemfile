@@ -6,19 +6,23 @@ gem 'twitter'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'devise'
-gem 'pg'
+# gem 'pg'
 gem 'dotenv-rails'
-gem 'httparty'
+gem 'jquery-rails'
 
 
 group :development, :test do
 	gem 'rspec-rails', '~> 2.0'
 	gem 'pry'
+	gem 'pg'
 	gem 'pry-rails'
 end
 
-group :assets do
-  gem 'uglifier', '>= 1.0.3'
-end
+# group :assets do
+#   gem 'uglifier', '>= 1.0.3'
+# end
 
-gem 'jquery-rails'
+group :production do
+  gem 'pg'
+  gem 'uglifier'
+end
