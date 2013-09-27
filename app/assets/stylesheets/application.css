@@ -16,6 +16,7 @@
 
 body {
 	font-family: 'Gentium Basic', serif; font-weight: 400;
+	background: #F7F7F7;
 }
 
 h2 {
@@ -60,7 +61,6 @@ nav {
 	height: 80%;
 	margin: 0 auto;
 	padding: 10px;
-	background: #F7F7F7;
 }
 
 #searches {
