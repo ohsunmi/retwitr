@@ -3,3 +3,11 @@ development:
   database: retwitr_development
   host: localhost
   username: Sunmi
+
+production:
+  encoding: unicode
+  adapter: postgresql
+  database: d988sma5uilsa9
+  pool: 5
+  username: bufxbeyxzfgdhe
+  password: REAIk71cf_9SbqAZkr5ndHr99P
