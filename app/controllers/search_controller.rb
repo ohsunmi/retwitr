@@ -46,6 +46,9 @@ class SearchController < ApplicationController
 	def view
 
 		@timeline = get_tweets(params[:id])
+
+		puts "================================"
+		p @timeline.first.user.profile_banner_url
 		# @search = Search.find(params[:id])
 		# q = @search.twitter_handle 
 
